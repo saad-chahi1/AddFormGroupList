@@ -1,0 +1,25 @@
+{
+  "quantiteTr": [
+    {
+      "date": "2022-02-01T23:00:00.000Z",
+      "shift": "option1",
+      "options": [
+        {
+          "unite": "option1",
+          "heureDebut": "16:42",
+          "heureFin": "17:43",
+          "silo": "option1",
+          "quantite": "123"
+        },
+        {
+          "unite": "option1",
+          "heureDebut": "21:47",
+          "heureFin": "22:49",
+          "silo": "option1",
+          "quantite": "eetr"
+        }
+      ],
+      "id": 1
+    }
+  ]
+}
