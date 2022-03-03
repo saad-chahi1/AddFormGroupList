@@ -1,0 +1,172 @@
+<div class="m-5 mt-3">
+    <h4>Suivi des taux de remplissage des silos</h4>
+    <form [formGroup]="formGroup">
+        <div class="miniComp">
+            <p>Validation des taux de remplissage des silos en fin de shift</p>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" formControlName="valide">
+                <label class="form-check-label" for="defaultCheck1">
+                Validation
+                </label>        
+            </div>
+            <br>
+            <button class="btn btn-warning">Sauvegarder</button>
+        </div>
+
+        <div class="miniComp">
+            <mat-form-field appearance="fill">
+                <mat-label>Date</mat-label>
+                <input matInput [matDatepicker]="picker" formControlName="date">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+        </div>
+
+        <div class="miniComp">
+            <mat-form-field class="inputGridItem" appearance="fill">
+                <mat-label>Shift</mat-label>
+                <mat-select formControlName="shift" required>
+                    <mat-option>None</mat-option>
+                    <mat-option value="option1">Option 1</mat-option>
+                    <mat-option value="option2">Option 2</mat-option>
+                    <mat-option value="option3">Option 3</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <div class="miniComp">
+            <mat-grid-list cols="6" rowHeight="6:2">
+                <mat-grid-tile>
+                    Unite 1 
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    Unite 2
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    Unite 3
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    Unite 4
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    Unite 5
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    Unite 6
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Silo A</mat-label>
+                        <input matInput type="text" required/>
+                    </mat-form-field> 
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Silo A</mat-label>
+                        <input matInput type="text" required/>
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Silo A</mat-label>
+                        <input matInput type="text" required/>
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Silo A</mat-label>
+                        <input matInput type="text" required/>
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Silo A</mat-label>
+                        <input matInput type="text" required/>
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Silo A</mat-label>
+                        <input matInput type="text" required/>
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Silo A</mat-label>
+                        <input matInput type="text" required/>
+                    </mat-form-field> 
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Silo A</mat-label>
+                        <input matInput type="text" required/>
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Silo A</mat-label>
+                        <input matInput type="text" required/>
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Silo A</mat-label>
+                        <input matInput type="text" required/>
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Silo A</mat-label>
+                        <input matInput type="text" required/>
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Silo A</mat-label>
+                        <input matInput type="text" required/>
+                    </mat-form-field>
+                </mat-grid-tile><mat-grid-tile>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Silo A</mat-label>
+                        <input matInput type="text" required/>
+                    </mat-form-field> 
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Silo A</mat-label>
+                        <input matInput type="text" required/>
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Silo A</mat-label>
+                        <input matInput type="text" required/>
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Silo A</mat-label>
+                        <input matInput type="text" required/>
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Silo A</mat-label>
+                        <input matInput type="text" required/>
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Silo A</mat-label>
+                        <input matInput type="text" required/>
+                    </mat-form-field>
+                </mat-grid-tile>    
+              </mat-grid-list>
+        </div>
+        <div class="miniComp">
+            <button class="btn btn-primary">
+                Enregistrer
+            </button>
+        </div>
+   
+     </form>
+</div>

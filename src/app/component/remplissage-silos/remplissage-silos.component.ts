@@ -1,28 +1,20 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl,
-  FormGroup,
-  FormArray,
-  Validators } from '@angular/forms';
-  import { faFileSignature, faTimesCircle } from '@fortawesome/free-solid-svg-icons';
-import { Quantite } from 'src/app/interface/quantite';
+import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { TransfertService } from 'src/app/service/transfert.service';
 
 @Component({
-  selector: 'app-quantite-transferees',
-  templateUrl: './quantite-transferees.component.html',
-  styleUrls: ['./quantite-transferees.component.css']
+  selector: 'app-remplissage-silos',
+  templateUrl: './remplissage-silos.component.html',
+  styleUrls: ['./remplissage-silos.component.css']
 })
+export class RemplissageSilosComponent implements OnInit {
 
-export class QuantiteTransfereesComponent implements OnInit {
- 
-  quantiteTransfereFormGroup!: FormGroup; 
-  faTimesCircle = faTimesCircle;
-  faFileSignature = faFileSignature;
+  formGroup!: FormGroup;
 
   arrayOptions!: any[];
   
   constructor(private fb: FormBuilder, private trq: TransfertService) {
-    this.quantiteTransfereFormGroup = this.fb.group({
+    this.formGroup = this.fb.group({
       date:['', Validators.required],
       shift:['', Validators.required],
       valide:[false, Validators.required],
@@ -39,8 +31,7 @@ export class QuantiteTransfereesComponent implements OnInit {
     /*if(this.quantiteTransfereFormGroup.invalid){
       return ;
     }*/
-    
-    const control = <FormArray>this.quantiteTransfereFormGroup.get("options");
+    const control = <FormArray>this.formGroup.get("options");
     const newGroup = this.fb.group({
       'unite':['', Validators.required], 
       'heureDebut':['', Validators.required], 
@@ -48,15 +39,14 @@ export class QuantiteTransfereesComponent implements OnInit {
       'silo':['', Validators.required], 
       'quantite':['', Validators.required]
     });
-    
 
     control.push(newGroup);
-    this.arrayOptions.push(this.quantiteTransfereFormGroup.controls['options'].value);
+    this.arrayOptions.push(this.formGroup.controls['options'].value);
   }
 
   onSubmit(questionData: any) {
     console.log(questionData);
-    if(this.quantiteTransfereFormGroup.controls['valide'].value){
+    if(this.formGroup.controls['valide'].value){
       this.trq.AddNewquantiteTr(questionData).subscribe(
         data=>{
           alert('Succeded added')
